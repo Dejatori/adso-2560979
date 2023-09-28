@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Insertar el nuevo usuario en la base de datos
     if ($Auth->registrar_administrador($usuario, $clave, $correo, $tipo_usuario)) {
         // Redirigir al usuario a la página de inicio de sesión
-        header("location: ../../index.php");
+        header("location: login.php");
         exit;
     } else {
         echo "Error al registrar usuario";

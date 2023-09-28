@@ -1,6 +1,6 @@
 <?php
 
-// Incluir archivo de conexión y clase Auth
+// Incluir archivo de conexión, clase Auth y archivo de funciones
 require_once 'clase_conexion.php';
 require_once 'clase_auth.php';
 
@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Insertar el nuevo usuario en la base de datos
     if ($Auth->registrar_usuario($nombre, $apellido, $correo, $clave, $tipo_doc_identidad, $doc_identidad, $fecha_nacimiento)) {
         // Redirigir al usuario a la página de inicio de sesión
-        header("location: /login.php");
+        header("location: login.php");
         exit(); // Detener el script
     } else {
         echo "Error al registrar usuario"; // Mostrar mensaje de error
