@@ -6,24 +6,24 @@
 
  
 <?php
-include_once("DatosMySQL.php");
- //$conn=Conexion::ConexionBD();
-try {
-    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    echo "Gracias a Dios: conectado a $dbname en $host Exitosamente.";
-} catch (PDOException $pe) {
-    die("Nada de Conexión $dbname :" . $pe->getMessage());
+include_once("DatosMySQL.php"); // Incluir el archivo DatosMySQL.php
+
+try { // Intentar conectar a la base de datos
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password); // Crear conexión usando PDO
+    echo "Gracias a Dios: conectado a $dbname en $host Exitosamente."; // Si no hay error en la conexión, se imprime este mensaje
+} catch (PDOException $pe) { // Si hay error en la conexión, se imprime este mensaje
+    die("Nada de Conexión $dbname :" . $pe->getMessage()); // Terminar el script si hay un error en la conexión
 }
 
 
-// Componemos la sentencia SQL
-$sql = "select * from datos";
-$query = $conn -> prepare($sql); 
-// Ejecutamos la sentencia SQL
-$query -> execute(); 
-$results = $query -> fetchAll(PDO::FETCH_OBJ); 
-//Verificar existencia de resultados
-if($query -> rowCount() > 0)   { 
+// Sentencia SQL
+$sql = "select * from datos"; // Seleccionar todos los registros de la tabla datos
+$query = $conn -> prepare($sql); // Preparar la sentencia SQL
+$query -> execute(); // Ejecutar la sentencia SQL
+$results = $query -> fetchAll(PDO::FETCH_OBJ); // Obtener todos los resultados de la sentencia SQL como objetos
+// (PDO::FETCH_OBJ es una constante de la clase PDO) que se guardan en la variable $results (arreglo de objetos)
+// PDO::FETCH_OBJ: devuelve un objeto anónimo con nombres de propiedades que corresponden a las columnas
+if($query -> rowCount() > 0)   { // Si hay resultados, se imprimen en una tabla
 ?>
 <table>
   <tr>
@@ -32,22 +32,23 @@ if($query -> rowCount() > 0)   {
 	<th>Nombre</th>
   </tr>
 <?php
-foreach($results as $result) { 
+foreach($results as $result) { // Se recorre el arreglo de objetos $results y se imprime cada objeto como una fila de la tabla
 	ECHO "
 	<tr>
 	<td>".$result -> Codigo."</td>
 	<td>".$result -> Fecha."</td>
 	<td>".$result -> Nombre."</td>
 	</tr>";
-   }
+   } // Fin del foreach
  }
- $result=null;
- $results=null;
+ // Liberar la memoria asociada con los resultados de la sentencia SQL
+ $result=null; 
+ $results=null; 
  $conn = null;
 ?>
   <tr>
   <p>
-    <a href="insertar.php">Añadir un nuevo registro</a>
+    <a href="insertar.php">Añadir un nuevo registro</a> <!-- Enlace a insertar.php -->
   </p>
   </tr>
 </table>  
