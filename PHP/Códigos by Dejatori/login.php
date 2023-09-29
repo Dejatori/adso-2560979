@@ -86,7 +86,13 @@ function isRememberedEmailSet(): bool
                 <div class="mb-3">
                     <label class="label" for="clave"></label>
                     <input class="input" id="clave" type="password" placeholder="Contraseña" name="clave" value="<?php echo $clave; ?>" required />
-                </div>
+                </div>                
+                <?php
+                    if (!empty($_SESSION['login_error'])) {
+                        echo $_SESSION['login_error'];
+                        unset($_SESSION['login_error']);
+                    }
+                ?>
                 <div class="mb-3">
                     <label class="checkbox-label" for='remember-me'>Recordarme</label>
                     <input class="checkbox-input" id="remember-me" type="checkbox" name="remember-me" <?php echo $remembered_checked; ?> />
