@@ -21,14 +21,17 @@ if ($_SESSION['tipo_usuario'] == 'Desarrollador' || $_SESSION['tipo_usuario'] ==
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Escala de la página -->
     <title>Administrador</title> <!-- Título de la página -->
     <meta property="og:type" content="website"> <!-- Tipo de contenido -->
-    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon"> <!-- Ícono de la página -->
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon"> <!-- Ícono de la página -->
     <meta property="og:title" content="Administrador"> <!-- Título del contenido -->
     <meta property="og:site_name" content="Proyecto ADSO"> <!-- Nombre del sitio -->
     <meta name="author" content="Dejatori"> <!-- Autor de la página -->
     <meta name="description" content="Práctica en clases proyecto ADSO"> <!-- Descripción de la página -->
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css"> <!-- Enlace a Bootstrap -->
-    <link rel="stylesheet" href="/assets/fonts/fontawesome-all.min.css"> <!-- Enlace a Font Awesome -->
-    <link rel="stylesheet" href="/assets/css/animate.min.css"> <!-- Enlace a Animate -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;display=swap'> <!-- Enlace a Google Fonts -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"> <!-- Enlace a Bootstrap -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css"> <!-- Enlace a Font Awesome -->
+    <link rel="stylesheet" href="assets/css/animate.min.css"> <!-- Enlace a Animate -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'> <!-- Enlace a Normalize -->
+    <link rel="stylesheet" href="assets/css/footer.css"> <!-- Enlace a la hoja de estilos -->
 </head>
 
 <body>
@@ -41,9 +44,9 @@ require_once 'templates/header.php'; // require_once: incluye el archivo solo un
 require_once 'templates/footer.php';
 ?>
 <!-- Scripts -->
-<script src='/assets/js/jquery.min.js'></script>
-<script src='/assets/bootstrap/js/bootstrap.min.js'></script>
-<script src='/assets/js/chart.min.js'></script>
+<script src='assets/js/jquery.min.js'></script>
+<script src='assets/bootstrap/js/bootstrap.min.js'></script>
+<script src='assets/js/chart.min.js'></script>
 
 </body>
 
