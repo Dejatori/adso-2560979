@@ -70,9 +70,9 @@ INSERT INTO usuarios (Cod_Usuario, Nombre, Apellido, Correo, Clave, Tipo_Doc_Ide
 VALUES 
  ('COD-00001', 'Usuario', 'Uno', 'usuario1@adso.com', '$6y$10_TxT', 'CC', '123456789', '1990-01-01', 'Usuario'),
  ('COD-00002', 'Usuario', 'Dos', 'usuario2@adso.com', '$7y$10_TxT', 'CC', '987654321', '1990-01-02', 'Usuario'),
- ('COD-00003', 'Usuario', 'Tres', 'usuario3@adso.com', '$8y$10_TxT', 'CC', '123456789', '1990-01-03', 'Usuario'),
- ('COD-00004', 'Usuario', 'Cuatro', 'usuario4@adso.com', '$9y$10_TxT', 'CC', '987654321', '1990-01-04', 'Usuario'),
- ('COD-00005', 'Usuario', 'Cinco', 'usuario5@adso.com', '$10y$10_TxT', 'CC', '123456789', '1990-01-05', 'Usuario');
+ ('COD-00003', 'Usuario', 'Tres', 'usuario3@adso.com', '$8y$10_TxT', 'CC', '123456788', '1990-01-03', 'Usuario'),
+ ('COD-00004', 'Usuario', 'Cuatro', 'usuario4@adso.com', '$9y$10_TxT', 'CC', '987654322', '1990-01-04', 'Usuario'),
+ ('COD-00005', 'Usuario', 'Cinco', 'usuario5@adso.com', '$10y$10_TxT', 'CC', '123456787', '1990-01-05', 'Usuario');
 
 -- Disparador para el código de usuario
 

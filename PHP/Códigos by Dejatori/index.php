@@ -36,23 +36,6 @@ if ($_SESSION['tipo_usuario'] == 'Desarrollador' || $_SESSION['tipo_usuario'] ==
     // Incluir el encabezado de la página
     require_once 'templates/header.php'; // require_once: incluye el archivo solo una vez
     ?>
-
-    <div class="container-fluid">
-        <section>
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="text-center">Administrador</h1>
-                </div>
-            </div>
-        </section>
-        <!-- Section con un formulario para agregar un nuevo usuario -->
-        <section>
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="text-center">Agregar un nuevo usuario</h2>
-                </div>
-                
-    </div>
     <?php
     // Incluir el pie de página
     require_once 'templates/footer.php';

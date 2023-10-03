@@ -1,5 +1,4 @@
 <?php
-
 // Incluir archivo de conexión y clase Auth
 require_once 'clase_conexion.php';
 require_once 'clase_auth.php';

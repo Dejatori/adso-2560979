@@ -84,7 +84,7 @@ function evitarInyeccion($conexion, $entrada, $tipoDato): bool|int|string|null
     // Validar entrada
     $entrada = validarEntradaEI($entrada);
     // Enlazar parámetros para evitar inyección de código
-    switch ($tipoDato) {
+    switch ($tipoDato) { 
         case PDO::PARAM_INT:
             $entrada = (int)$entrada;
             break;
@@ -185,9 +185,9 @@ function encriptarContrasena($contrasena): string
 
 function downloadAndSaveFile($url, $destination): void
 {
-    $fileContent = file_get_contents($url);
-    if ($fileContent !== false) {
-        file_put_contents($destination, $fileContent);
+    $fileContent = file_get_contents($url); // Obtener el contenido del archivo
+    if ($fileContent !== false) { // Si se obtuvo el contenido del archivo
+        file_put_contents($destination, $fileContent); // Guardar el contenido del archivo en la ruta especificada
     }
 }
 
