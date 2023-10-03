@@ -2,7 +2,7 @@
 
 <?php
 // Conexion a la Base Datos
-include_once 'ConexionDesp.php';
+include_once 'ConexionPro.php';
 $mysqli = new mysqli($host, $usuario, $clave, $baseDatos);
 
 // Averigua si hya problemas de Conexión

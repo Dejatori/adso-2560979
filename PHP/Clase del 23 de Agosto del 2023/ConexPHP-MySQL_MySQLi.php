@@ -1,6 +1,6 @@
 <!-- Este archivo es de conexión a la base de datos usando mysqli -->
 
-<?php 
+<?php
 // Definir las variables de conexión
 $host = 'localhost';
 $dbname = 'prueba';

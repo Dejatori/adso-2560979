@@ -5,7 +5,7 @@
 $Id_Producto = $_GET['Id_Producto'];
 
 // Conexion a la Base Datos
-include_once 'ConexionDesp.php';
+include_once 'ConexionPro.php';
 $mysqli = new mysqli($host, $usuario, $clave, $baseDatos);
 
 // Averigua si hya problemas de Conexión
@@ -34,12 +34,12 @@ $Unidades = $mysqli->query($Cadena);
     <form action="" method="post">
         <tr>
             <input name="Id_Producto" type="hidden" value="<?= $row->Id_Producto ?>">
-            <td><input name="Descripcion" type="text" value="<?= $row->Descripcion ?>" readonly></td>
+            <td><input name="Descripcion" type="text" value="<?= $row->Descripcion ?>"</td>
             <td><input name="Precio_Unitario" type="text" value="<?= $row->Precio_Unitario ?>"
-                       placeholder="Precio_Unitario" readonly></td>
-            <td><input name="Stock" type="text" value="<?= $row->Stock ?>" placeholder="Stock" readonly></td>
+                       placeholder="Precio_Unitario"></td>
+            <td><input name="Stock" type="text" value="<?= $row->Stock ?>" placeholder="Stock"></td>
             <td>
-                <select name="Id_Medida" id="Id_Medida" readonly disabled>
+                <select name="Id_Medida" id="Id_Medida">
                     <?php while ($reg = mysqli_fetch_object($Unidades)) {
                         if (trim($row->Id_Medida) == trim($reg->Id_Unidad)) {
                             echo "<option value=" . $reg->Id_Unidad . " SELECTED>" . $reg->DescMedida . "</option>";

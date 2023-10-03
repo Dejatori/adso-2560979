@@ -11,37 +11,37 @@ try {
 }
 
 $sql = "select * from Tipo_Documento";
-$query = $conn -> prepare($sql); 
+$query = $conn->prepare($sql);
 // Ejecutamos la sentencia SQL
-$query -> execute(); 
-$LisTipos = $query -> fetchAll(PDO::FETCH_OBJ); 
+$query->execute();
+$LisTipos = $query->fetchAll(PDO::FETCH_OBJ);
 
 // Componemos la sentencia SQL
 $sql = "select * from Personas";
-$query = $conn -> prepare($sql); 
+$query = $conn->prepare($sql);
 // Ejecutamos la sentencia SQL
-$query -> execute(); 
-$LisPer = $query -> fetchAll(PDO::FETCH_OBJ); 
+$query->execute();
+$LisPer = $query->fetchAll(PDO::FETCH_OBJ);
 
 //Verificar existencia de resultados
-if($query -> rowCount() > 0)   { 
+if ($query->rowCount() > 0) {
 
 
-echo 'Id' . " | " . 'Nombre' . " | " . 'Apellido' . " | " . 'Id_TipoDcto' . " | ".'Nro_Dcto<br><br>';
+    echo 'Id' . " | " . 'Nombre' . " | " . 'Apellido' . " | " . 'Id_TipoDcto' . " | " . 'Nro_Dcto<br><br>';
 // Recorre el listado de Personas
-	foreach($LisPer as $Per)  {
-     echo $Per -> Id_Persona . " | " . $Per -> Nombre . " | " . $Per -> Apellido . " | ";
-	 foreach($LisTipos as $TDcto) {
-	 	 if ($TDcto->Id_TipoDcto == $Per->Id_TipoDcto)
-			 Echo $TDcto->Descripcion;
-		}
-	 echo " | "  . $Per -> Nro_Dcto . " | " ;
-?>
-	  <a href="EditaPer.php?Id_Persona=<?=$Per -> Id_Persona?>">Editar</a> | 
-	  <a href="BorraPer.php?Id_Persona=<?=$Per -> Id_Persona?>">Borrar</a>	  
-	  <br>
- <?php
-	}
+    foreach ($LisPer as $Per) {
+        echo $Per->Id_Persona . " | " . $Per->Nombre . " | " . $Per->Apellido . " | ";
+        foreach ($LisTipos as $TDcto) {
+            if ($TDcto->Id_TipoDcto == $Per->Id_TipoDcto)
+                echo $TDcto->Descripcion;
+        }
+        echo " | " . $Per->Nro_Dcto . " | ";
+        ?>
+        <a href="EditaPer.php?Id_Persona=<?= $Per->Id_Persona ?>">Editar</a> |
+        <a href="BorraPer.php?Id_Persona=<?= $Per->Id_Persona ?>">Borrar</a>
+        <br>
+        <?php
+    }
 }
 ?>
 

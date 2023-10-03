@@ -1,8 +1,8 @@
 <html>
- <head>
-  <title>Prueba de PHP</title>
- </head>
- <body>
+<head>
+    <title>Prueba de PHP</title>
+</head>
+<body>
 
 <?php
 include_once("DatosMySQL.php"); // Incluir el archivo DatosMySQL.php
@@ -13,7 +13,7 @@ try { // Intentar conectar a la base de datos
 } catch (PDOException $pe) { // Si hay error en la conexión, se imprime este mensaje
     die("Nada de Conexión $dbname :" . $pe->getMessage()); // Terminar el script si hay un error en la conexión
 }
- $conn = null; // Cerrar la conexión
+$conn = null; // Cerrar la conexión
 ?>
 
 </body>

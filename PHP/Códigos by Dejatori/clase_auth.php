@@ -7,7 +7,7 @@ class Auth
 {
     // Atributo para la conexión a la base de datos (instancia de la clase Conexion)
     // protected: solo se puede acceder desde la misma clase y desde las clases que heredan de ella
-    protected PDO $conexion; 
+    protected PDO $conexion;
 
     public function __construct(Conexion $conexion) // __construct: se ejecuta al instanciar la clase y recibe como parámetro una instancia de la clase Conexion
     {
@@ -161,7 +161,7 @@ class Auth
             $this->actualizar_ultimo_inicio_sesion_admin($result['ID_Administrador']);
 
             return true;
-        } else { 
+        } else {
             return false;
         }
 

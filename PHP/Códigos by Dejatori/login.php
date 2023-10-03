@@ -57,6 +57,7 @@ function isRememberedEmailSet(): bool
 {
     return isset($_COOKIE['remembered_email']); // Devolver verdadero si la cookie de recordar correo está establecida
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -73,42 +74,45 @@ function isRememberedEmailSet(): bool
 </head>
 
 <body>
-    <main>
-        <div class="container">
-            <div class="text-center">
-                <h1 class="h4 mb-4">¡Bienvenido!</h1>
-            </div>
-            <form class="user-form text-center" action="logear.php" method="POST" id="login_user">
-                <div class="mb-3">
-                    <label class="label" for="correo"></label>
-                    <input class="input" id="correo" type="email" aria-describedby="emailHelp" placeholder="Ingresa tu correo" name="correo" autofocus value="<?php echo $correo; ?>" required />
-                </div>
-                <div class="mb-3">
-                    <label class="label" for="clave"></label>
-                    <input class="input" id="clave" type="password" placeholder="Contraseña" name="clave" value="<?php echo $clave; ?>" required />
-                </div>                
-                <?php
-                    if (!empty($_SESSION['login_error'])) {
-                        echo $_SESSION['login_error'];
-                        unset($_SESSION['login_error']);
-                    }
-                ?>
-                <div class="mb-3">
-                    <label class="checkbox-label" for='remember-me'>Recordarme</label>
-                    <input class="checkbox-input" id="remember-me" type="checkbox" name="remember-me" <?php echo $remembered_checked; ?> />
-                </div>
-                <button class="btn d-block w-100" type="submit">
-                    Iniciar sesión
-                </button>
-            </form>
-            <div class="text-center">
-                <a class="small" href="olvidaste_tu_contrasena.php">¿Olvidaste tu contraseña?</a>
-            </div>
-            <div class="text-center">
-                <a class="small" href="crear_usuario.php">Crear un usuario</a>
-            </div>
+<main>
+    <div class="container">
+        <div class="text-center">
+            <h1 class="h4 mb-4">¡Bienvenido!</h1>
         </div>
-    </main>
+        <form class="user-form text-center" action="logear.php" method="POST" id="login_user">
+            <div class="mb-3">
+                <label class="label" for="correo"></label>
+                <input class="input" id="correo" type="email" aria-describedby="emailHelp"
+                       placeholder="Ingresa tu correo" name="correo" autofocus value="<?php echo $correo; ?>" required/>
+            </div>
+            <div class="mb-3">
+                <label class="label" for="clave"></label>
+                <input class="input" id="clave" type="password" placeholder="Contraseña" name="clave"
+                       value="<?php echo $clave; ?>" required/>
+            </div>
+            <?php
+            if (!empty($_SESSION['login_error'])) {
+                echo $_SESSION['login_error'];
+                unset($_SESSION['login_error']);
+            }
+            ?>
+            <div class="mb-3">
+                <label class="checkbox-label" for='remember-me'>Recordarme</label>
+                <input class="checkbox-input" id="remember-me" type="checkbox"
+                       name="remember-me" <?php echo $remembered_checked; ?> />
+            </div>
+            <button class="btn d-block w-100" type="submit">
+                Iniciar sesión
+            </button>
+        </form>
+        <div class="text-center">
+            <a class="small" href="olvidaste_tu_contrasena.php">¿Olvidaste tu contraseña?</a>
+        </div>
+        <div class="text-center">
+            <a class="small" href="crear_usuario.php">Crear un usuario</a>
+        </div>
+    </div>
+</main>
 </body>
 
 </html>

@@ -1,9 +1,9 @@
 <html>
- <head>
-  <title>Prueba de PHP</title>
- </head>
- <body>
- 
+<head>
+    <title>Prueba de PHP</title>
+</head>
+<body>
+
 <?php
 // Variables de conexión
 $host = 'localhost';
@@ -24,31 +24,31 @@ $ssql = "select * from datos";
 
 // Ejecutamos la sentencia SQL
 $result = $conn->query($ssql); // El resultado se guarda en la variable $result
- ?>
+?>
 <!-- Imprimimos los resultados en una tabla -->
 <table>
-  <tr>
-    <th>Codigo</th>
-    <th>Fecha</th>
-	<th>Nombre</th>
-  </tr>
-  <?php
+    <tr>
+        <th>Codigo</th>
+        <th>Fecha</th>
+        <th>Nombre</th>
+    </tr>
+    <?php
     //Mostramos los registros
     while ($row = $result->fetch_array()) { // Se recorre el arreglo de objetos $result y se imprime cada objeto como una fila de la tabla
-      // fetch_array(): obtiene una fila de resultados como un array asociativo, numérico, o ambos (constantes de la clase mysqli)
-      // se guardan en la variable $row (arreglo asociativo) y se imprimen los valores de cada fila
-      echo '<tr><td>' . $row["Codigo"] . '</td>';
-      echo '<td>' . $row["Fecha"] . '</td>';
-	  echo '<td>' . $row["Nombre"] . '</td></tr>';
+        // fetch_array(): obtiene una fila de resultados como un array asociativo, numérico, o ambos (constantes de la clase mysqli)
+        // se guardan en la variable $row (arreglo asociativo) y se imprimen los valores de cada fila
+        echo '<tr><td>' . $row["Codigo"] . '</td>';
+        echo '<td>' . $row["Fecha"] . '</td>';
+        echo '<td>' . $row["Nombre"] . '</td></tr>';
     }
     $result->free_result(); // Liberar la memoria asociada con los resultados de la sentencia SQL
     $conn->close(); // Cerrar la conexión
-  ?>
+    ?>
 </table>
 
-  <p>
+<p>
     <a href="insertar.php">Añadir un nuevo registro</a> <!-- Enlace a insertar.php -->
-  </p>
+</p>
 
 </body>
 </html>

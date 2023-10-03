@@ -24,7 +24,7 @@ if ($_SESSION['tipo_usuario'] == 'Desarrollador' || $_SESSION['tipo_usuario'] ==
     <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon"> <!-- Ícono de la página -->
     <meta property="og:title" content="Administrador"> <!-- Título del contenido -->
     <meta property="og:site_name" content="Proyecto ADSO"> <!-- Nombre del sitio -->
-    <meta name ="author" content = "Dejatori"> <!-- Autor de la página -->
+    <meta name="author" content="Dejatori"> <!-- Autor de la página -->
     <meta name="description" content="Práctica en clases proyecto ADSO"> <!-- Descripción de la página -->
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css"> <!-- Enlace a Bootstrap -->
     <link rel="stylesheet" href="/assets/fonts/fontawesome-all.min.css"> <!-- Enlace a Font Awesome -->
@@ -32,14 +32,14 @@ if ($_SESSION['tipo_usuario'] == 'Desarrollador' || $_SESSION['tipo_usuario'] ==
 </head>
 
 <body>
-    <?php
-    // Incluir el encabezado de la página
-    require_once 'templates/header.php'; // require_once: incluye el archivo solo una vez
-    ?>
-    <?php
-    // Incluir el pie de página
-    require_once 'templates/footer.php';
-    ?>
+<?php
+// Incluir el encabezado de la página
+require_once 'templates/header.php'; // require_once: incluye el archivo solo una vez
+?>
+<?php
+// Incluir el pie de página
+require_once 'templates/footer.php';
+?>
 <!-- Scripts -->
 <script src='/assets/js/jquery.min.js'></script>
 <script src='/assets/bootstrap/js/bootstrap.min.js'></script>

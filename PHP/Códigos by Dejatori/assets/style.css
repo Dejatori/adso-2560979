@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -131,11 +131,11 @@ h4 {
 }
 
 .d-block {
-    display: block!important;
+    display: block !important;
 }
 
 .w-100 {
-    width: 100%!important;
+    width: 100% !important;
 }
 
 .alert {

@@ -84,7 +84,7 @@ function evitarInyeccion($conexion, $entrada, $tipoDato): bool|int|string|null
     // Validar entrada
     $entrada = validarEntradaEI($entrada);
     // Enlazar parámetros para evitar inyección de código
-    switch ($tipoDato) { 
+    switch ($tipoDato) {
         case PDO::PARAM_INT:
             $entrada = (int)$entrada;
             break;
@@ -129,7 +129,7 @@ function validarEntrada(PDO $pdo, $entrada, string $tipoDato)
 
     // Convertir caracteres especiales en entidades HTML
     $entrada = htmlspecialchars($entrada, ENT_QUOTES, 'UTF-8');
-    
+
     // Validamos si el tipo de dato es soportado ('bool', 'int', 'string', 'null', 'float', 'email', 'date').
     if (!in_array($tipoDato, ['bool', 'int', 'string', 'null', 'float', 'email', 'date'])) {
         throw new InvalidArgumentException('Tipo de dato no válido. Los tipos válidos son: "bool", "int", "string", "null", "float", "email" o "date".');
