@@ -5,6 +5,8 @@
 }
 
 html {
+    height: 100vh;
+    width: 100%;
     font-family: sans-serif;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%
@@ -149,4 +151,32 @@ h4 {
     color: #721c24;
     background-color: #f8d7da;
     border-color: #f5c6cb;
+}
+
+/* Header */
+
+.navbar {
+    padding: 20px;
+    background-color: #007bff;
+}
+
+.navbar-brand {
+    color: #19ab17;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar-nav {
+    padding: 10px;
+}
+
+.ms-auto {
+    margin-left: auto !important;
+}
+
+.nav-link {
+    color: #002aff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 10px;
 }

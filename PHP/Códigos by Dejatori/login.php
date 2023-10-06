@@ -70,7 +70,7 @@ function isRememberedEmailSet(): bool
     <meta property="og:type" content="website">
     <link rel="icon" href="assets/img/favicon/favicon.ico" type="image/x-icon">
     <meta name="description" content="Página de practica en el Sena.">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>

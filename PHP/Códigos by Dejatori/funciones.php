@@ -6,12 +6,12 @@ function recuerdame($correo, $contrasena): void // void significa que no devuelv
     if (isset($_POST['remember-me']) === true) {
         $expire = time() + (30 * 24 * 60 * 60); // Expira en 30 días
         // Crear una cookie para el correo y otra para la contraseña
-        setcookie('remembered_email', $correo, $expire, '/', 'midominio.com', true, true); // midominio.com es el dominio de la cookie
-        setcookie('remembered_password', $contrasena, $expire, '/', 'midominio.com', true, true); // El último parámetro es para que la cookie sea segura (https)
+        setcookie('remembered_email', $correo, $expire, '/', $_SERVER['HTTP_HOST'], true, false); // midominio.com es el dominio de la cookie
+        setcookie('remembered_password', $contrasena, $expire, '/', $_SERVER['HTTP_HOST'], true, false);
     } else {
         // Si no está marcado, eliminar la cookie
-        setcookie('remembered_email', '', time() - 3600, '/', 'midominio.com', true, true);
-        setcookie('remembered_password', '', time() - 3600, '/', 'midominio.com', true, true);
+        setcookie('remembered_email', '', time() - 3600, '/', $_SERVER['HTTP_HOST'], true, false);
+        setcookie('remembered_password', '', time() - 3600, '/', $_SERVER['HTTP_HOST'], true, false);
     }
 }
 

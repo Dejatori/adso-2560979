@@ -259,19 +259,7 @@
              style="--size:4.390947862087191rem; --distance:6.190201563681275rem; --position:69.3528823997794%; --time:2.6129376732959346s; --delay:-3.147687779367443s;"></div>
     </div>
     <div class="content_footer">
-        <div>
-            <div><b>Eldew</b><a href="#">Secuce</a><a href="#">Drupand</a><a href="#">Oceash</a><a href="#">Ugefe</a><a
-                        href="#">Babed</a></div>
-            <div><b>Spotha</b><a href="#">Miskasa</a><a href="#">Agithe</a><a href="#">Scesha</a><a href="#">Lulle</a>
-            </div>
-            <div><b>Chashakib</b><a href="#">Chogauw</a><a href="#">Phachuled</a><a href="#">Tiebeft</a><a
-                        href="#">Ocid</a><a href="#">Izom</a><a href="#">Ort</a></div>
-            <div><b>Athod</b><a href="#">Pamuz</a><a href="#">Vapert</a><a href="#">Neesk</a><a href="#">Omemanen</a>
-            </div>
-        </div>
-        <div><a class="image_footer" href="https://codepen.io/z-" target="_blank"
-                style="background-image: url(&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/happy.svg&quot;)"></a>
-            <p>©2023</p>
+            <p class="text-center">ADSO DEVELOPERS ©2023</p>
         </div>
     </div>
 </div>
