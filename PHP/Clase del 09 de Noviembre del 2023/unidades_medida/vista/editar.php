@@ -1,7 +1,10 @@
 <?php
+// Requiere el header
 require_once("layouts/header.php");
 ?>
+<!-- Formulario para obtener los datos -->
 <h1 class="text-center">EDITAR</h1>
+<!-- Se incluye un botón para actualizar -->
 <form action="" method="get">
     <?php
     foreach($dato as $key => $value):
@@ -19,4 +22,5 @@ require_once("layouts/header.php");
 </form>
 
 <?php
+// Requiere el footer
 require_once("layouts/footer.php");
